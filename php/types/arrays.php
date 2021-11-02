@@ -56,3 +56,27 @@ echo "Age is $cv[age]".PHP_EOL;
 echo "Name is {$cv['name']}".PHP_EOL;
 echo "Second programming language is {$cv['programming_languages'][1]}".PHP_EOL;
 echo "First job is {$cv["jobs"][0]['title']}".PHP_EOL;
+
+//array dereferencing
+function getArray() {
+    return array(1,2,3);
+}
+
+$secondElement = getArray()[1];
+
+list(,$secondElement) =  getArray();
+
+//append and remove elements
+$arr = array(5 => 1, 12 => 2);
+
+$arr[] = 42;
+
+var_dump($arr);
+
+unset($arr[5]);
+
+var_dump($arr);
+
+unset($arr);
+
+var_dump($arr);

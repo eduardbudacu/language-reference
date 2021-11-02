@@ -37,10 +37,10 @@
             ],
             "program": "",
             "cwd": "${workspaceRoot}",
-            "port": 9000,
+            "port": 8000,
             "serverReadyAction": {
                 "pattern": "Development Server \\(http://localhost:([0-9]+)\\) started",
-                "uriFormat": "http://localhost:%s",
+                "uriFormat": "http://localhost:8000",
                 "action": "openExternally"
             }
         }
