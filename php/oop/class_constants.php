@@ -1,7 +1,9 @@
 <?php
 
-
 class MyClass {
+    //class constants remain unchanged
+    //by default all constants are public
+    //since php 7.1.0 visibility modifiers are allowed for class constants
     const CONSTANT = 'a constant value';
 
     function showConstant() {
@@ -20,9 +22,6 @@ echo $classname::CONSTANT;
 $obj->showConstant();
 
 echo $obj::CONSTANT;
-
-//by default all constants are public
-//since php 7.1.0 visibility modifiers are allowed for class constants
 
 // special ::class constat allows for fully qualified class name resolution
 

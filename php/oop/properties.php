@@ -5,25 +5,33 @@ define('myConstant', 42);
 
 //property declaration
 class SimpleClass {
-
+    //undefined public variable
     public $var;
+    //string variable with a default value
     public $var0 = 'some string';
+    //string variable obtained by concatenating two strings
     public $var1 = 'hello ' . 'world';
+    //heredoc string variable
     public $var2 = <<<EOD
 hello world
 EOD;
+    // integer variable with default value obtained from an expresion
     public $var3 = 1 + 2;
+    // integer variable with default value from a constant
     public $var4 = myConstant;
+    // array variable with two bolean items
     public $var5 = [true, false];
+    //nowdoc string variable
     public $var6 = <<<'EOD'
 hello world
 EOD;
+
     //invalid property declarations
     //public $var7 = self::myStaticMethod();
     //public $var8 = $myVar;
 }
 
-array_map(function($v) { var_dump($v); }, get_object_vars((new SimpleClass())));
+//array_map(function($v) { var_dump($v); }, get_object_vars((new SimpleClass())));
 
 //since php 7.4.0 property definitions can include type declarations
 

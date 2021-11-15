@@ -30,3 +30,22 @@ $tpl->setVariable('name', 'Eduard');
 $tpl->setVariable('age', '34');
 
 echo $tpl->getHtml('My name is {name} and I am {age} years old');
+
+
+//interfaces are extendable
+
+interface A {
+    public function foo();
+}
+
+interface B extends A {
+    public function baz(Baz $baz);
+}
+
+class C implements B {
+    public function foo() {}
+
+    public function baz(Baz $baz) {}
+}
+
+//
