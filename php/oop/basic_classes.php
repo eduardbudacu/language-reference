@@ -23,7 +23,12 @@ $instance = new SimpleClass();
 $assigned = $instance;
 $reference = &$instance;
 
+var_dump($instance);
+var_dump($reference);
+var_dump($assigned);
+
 $instance->var = '$assigned will have this value';
+echo $assigned->var;
 
 $instance = null;
 
